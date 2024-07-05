@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.menu {
+    float: right;
+}
+
+.menu-item {
+    display: inline;
+    margin: 5px;
+    /* padding: 5px; */
+}
+
+/* Descendant Selector */
+.menu-item a {
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: small;
+}
+

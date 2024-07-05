@@ -1,0 +1,39 @@
+p {
+    /* text-align: center; */
+    /* text-align: right; */
+    text-align: left;
+
+    /* shorthand property */
+    /* text-decoration: 1px solid black line-through; */
+    /* text-decoration-line: line-through;
+    text-decoration-color: black;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px; */
+
+    text-transform: uppercase;
+
+    line-height: 22px;
+
+    letter-spacing: 5px;
+    word-spacing: 20px;
+
+    text-indent: 30px;
+
+    white-space: wrap;
+    /* white-space: nowrap; */
+    /* white-space: pre; */
+}
+
+h1 {
+    /* text-shadow: x y radius/blur color; */
+    text-shadow: 
+        10px 10px 3px red,
+        15px 15px 3px blue,
+        20px 20px 3px yellow
+        ;
+    
+    /* font-family: cursive; */
+    /* font-size: 10px; */
+    font-style: italic;
+    font-weight: 900;
+}

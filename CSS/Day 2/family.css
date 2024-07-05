@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+p {
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+h1 {
+    font-family: "Playwrite GB S", 'Times New Roman';
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+}

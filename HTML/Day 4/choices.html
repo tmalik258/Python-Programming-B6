@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+        <!-- Radio Buttons to select only one choice -->
+        <p>Select your mode of Payment</p>
+        <input type="radio" id="cod" name="wop" value="cod" required />
+        <label for="cod">Cash on Delivery</label>
+        <br />
+        <label for="visa">
+          <input type="radio" id="visa" name="wop" value="visa" required />
+          Visa
+        </label>
+        <br />
+        <input type="radio" id="jc" name="wop" value="jazzcash" required />
+        <label for="jc">Jazzcash</label>
+        <br /><br />
+        <!-- Checkbox buttons to select multiple choices -->
+        <p>Select your skills</p>
+        <input type="checkbox" id="hc" name="skillset " value="html/css" />
+        <label for="hc">Html/Css</label>
+        <br />
+        <input type="checkbox" id="js" name="skillset" value="js" />
+        <label for="js">JavaScript</label>
+        <!-- django, java, c, c++ -->
+        <br />
+        <input type="checkbox" id="py" name="skillset" value="python" />
+        <label for="py">Python</label>
+        <br /><br />
+        <label for="ctry">Choose Country:</label>
+        <select name="country" id="ctry" required>
+            <option value="">Select Country</option>
+            <option value="pk">Pakistan</option>
+            <option value="en">England</option>
+            <option value="afg">Afghanistan</option>
+            <option selected>Iran</option>
+            <option value="in" selected>India</option>
+            <option>Saudia Arabia</option>
+        </select>
+        <br><br>
+        
+        <p>Data list</p>
+        <input type="text" name="browsers" list="browsers">
+        <datalist id="browsers">
+            <option>Edge</option>
+            <option>Chrome</option>
+            <option>FireFox</option>
+            <option>Safari</option>
+            <option>Opera</option>
+        </datalist>
+        
+
+        <br><br>
+        <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>

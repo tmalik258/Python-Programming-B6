@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Register your Account</h1>
+
+        <fieldset>
+            <legend><b>Personal Information</b></legend>
+
+            <input type="text" name="fname" placeholder="First Name">
+            <br>
+            <input type="text" name="lname" placeholder="Second Name">
+            <br>
+            <input type="email" name="email" placeholder="Enter your email">
+            <br>
+            <input type="text" name="username" placeholder="Enter your username">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><b>Address</b></legend>
+            <input type="text" name="add1" placeholder="Address line 1">
+            <br>
+            <input type="text" name="add2" placeholder="Address line 2">
+            <br>
+            <input type="text" name="city" placeholder="city">
+            <br>
+            <select name="state">
+                <option value="">Select State</option>
+                <option>Punjab</option>
+                <option selected>Sindh</option>
+                <option>Balochistan</option>
+                <option>KPK</option>
+            </select>
+            <br>
+            <select name="ctry">
+                <option value="">Select Country</option>
+                <option value="pk">Pakistan</option>
+            </select>
+        </fieldset>
+
+        <br><br>
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>
