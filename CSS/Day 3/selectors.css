@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url('./Bebas_Neue/OFL.txt');
+}
+
+body {
+    /* background-color: black; */
+    /* color: aliceblue; */
+    font-family: "Bebas Neue";
+}
+
+/* Universal Selector - asterik */
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+}
+
+/* ID Selector */
+#heading1 {
+    color: red;
+}
+
+#para1 {
+    background-color: aqua;
+}
+
+#item-1 {
+    margin: 10px 0;
+}
+
+#box1 {
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+    
+    padding: 20px 10px; /* top right bottom left */
+    margin: 20px 0px 100px 20px;   /* top right bottom left */
+    
+    border-radius: 10px 30px 20px 1px; /* top-left top-right bottom-right bottom-left */
+
+    /* border: 10px solid rgb(191, 26, 26); */ /* short hand property */
+    border-color: black;
+    border-style: solid;
+    border-width: 10px;
+    border-bottom-width: 50px;
+    border-left-width: 20px;
+}
+
+/* Class Selector */
+.bold {
+    font-weight: 900;
+}
+
+.font-size-larger {
+    font-size: 30px;
+}
+

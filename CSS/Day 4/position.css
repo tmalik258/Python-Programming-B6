@@ -1,0 +1,39 @@
+.container {
+    background-color: black;
+    height: 300px;
+    position: relative;
+
+    /* overflow: hidden; */
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+#box1 {
+    /* position: static;  default - no t/b/l/r apply on this position */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+}
+
+#box2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: blue;
+}
+
+#box3 {
+    background-color: yellow;
+}
+
+#box4 {
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+    background-color: red;
+} 
