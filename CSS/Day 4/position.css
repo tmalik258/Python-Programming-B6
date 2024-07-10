@@ -40,8 +40,15 @@
 
 #box4 {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    bottom: 0;
+    right: 0px;
     background-color: violet;
     z-index: 30;
-} 
+}
+
+.heading-sticky {
+    position: sticky; /* change positions from relative to fixed according to viewport */
+    position: -webkit-sticky;
+    top: 10px;
+    bottom: 0;
+}
