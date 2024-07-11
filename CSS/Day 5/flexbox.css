@@ -3,22 +3,36 @@
     background-color: black;
 
     display: flex;
-    flex-direction: row; /* default *?
+    flex-direction: row; /* default */
     /* flex-direction: row-reverse; */
     /* flex-direction: column; */
     /* flex-direction: column-reverse; */
 
+    /* justify content works on main axis */
     /* justify-content on x-axis if direction is from left to right */
     /* justify-content: space-between; */
-    justify-content: center;
+    /* justify-content: center; */
     /* justify-content: space-around; */
     /* justify-content: space-evenly; */
     /* justify-content: flex-end; */
     /* justify-content: flex-start; default */
 
-    align-items: flex-start;
-    align-items: flex-end;
-    align-items: center;
+    /* align items/align content work on cross axis */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    align-items: baseline;
+
+
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;
+
+    /* flex-wrap: nowrap; -- default */
+    /* flex-wrap: wrap-reverse; */
+    /* flex-wrap: wrap; */
+
+    flex-flow: row wrap; /* short hand property for direction and wrap */
 }
 
 .item {
@@ -29,16 +43,50 @@
 #item-1 {
     background: rgb(198,29,219);
     background: linear-gradient(90deg, rgba(198,29,219,1) 0%, rgba(0,241,251,1) 50%, rgba(249,255,0,1) 100%);
+
+    order: 5;
 }
 
 #item-2 {
     background-color: red;
+    order: 4;
 }
 
 #item-3 {
     background-color: rgb(58, 158, 16);
+    order: 6;
 }
 
 #item-4 {
     background-color: rgb(249, 177, 10);
+    order: 1;
+}
+#item-5 {
+    background-color: rgb(10, 249, 225);
+    order: 3;
+}
+#item-6 {
+    background-color: rgb(46, 10, 249);
+    order: 2;
+}
+#item-7 {
+    background-color: rgb(249, 82, 10);
+    order: 7;
+    flex-grow: 3;
+}
+#item-8 {
+    display: flex;
+    align-items: center;
+    background-color: rgb(165, 10, 249);
+    height: 125px;
+    order: 9;
+    flex-grow: 2;
+}
+#item-9 {
+    display: flex;
+    align-items: flex-end;
+    background-color: rgb(10, 165, 249);
+    height: 150px;
+    order: 8;
+    flex-grow: 1;
 }
