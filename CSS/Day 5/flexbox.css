@@ -20,23 +20,24 @@
     /* align items/align content work on cross axis */
     /* align-items: flex-start; */
     /* align-items: flex-end; */
-    /* align-items: center; */
-    align-items: baseline;
+    align-items: center;
+    /* align-items: baseline; */
 
 
-    align-content: space-between;
-    align-content: space-around;
-    align-content: space-evenly;
+    /* align-content: space-between;
+    align-content: space-around; */
+    /* align-content: space-evenly; */
 
     /* flex-wrap: nowrap; -- default */
     /* flex-wrap: wrap-reverse; */
     /* flex-wrap: wrap; */
 
-    flex-flow: row wrap; /* short hand property for direction and wrap */
+    gap: 10px;
+    flex-flow: row; /* short hand property for direction and wrap */
 }
 
 .item {
-    width: 100px;
+    flex-basis: 100px; /* similar to width but used for flex-item */
     height: 100px;
 }
 
@@ -49,6 +50,7 @@
 
 #item-2 {
     background-color: red;
+    align-self: center; /* will work if align-content is not used */
     order: 4;
 }
 
@@ -60,6 +62,7 @@
 #item-4 {
     background-color: rgb(249, 177, 10);
     order: 1;
+    flex-shrink: 2;
 }
 #item-5 {
     background-color: rgb(10, 249, 225);
@@ -73,6 +76,9 @@
     background-color: rgb(249, 82, 10);
     order: 7;
     flex-grow: 3;
+    flex-shrink: 2;
+    font-size: 50px; /* default value = 16px */
+    width: 1em; /* 1 em = font-size */
 }
 #item-8 {
     display: flex;
@@ -80,7 +86,7 @@
     background-color: rgb(165, 10, 249);
     height: 125px;
     order: 9;
-    flex-grow: 2;
+    flex: 5 2; /* shorthand property for - flex-grow flex-shrink flex-basis */
 }
 #item-9 {
     display: flex;
@@ -89,4 +95,5 @@
     height: 150px;
     order: 8;
     flex-grow: 1;
+    flex-shrink: 13; /* shrink mtlb contract */
 }
