@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 .container {
     height: 500px;
     background-color: black;
@@ -18,9 +24,9 @@
     /* justify-content: flex-start; default */
 
     /* align items/align content work on cross axis */
-    /* align-items: flex-start; */
+    align-items: flex-start;
     /* align-items: flex-end; */
-    align-items: center;
+    /* align-items: center; */
     /* align-items: baseline; */
 
 
@@ -31,7 +37,6 @@
     /* flex-wrap: nowrap; -- default */
     /* flex-wrap: wrap-reverse; */
     /* flex-wrap: wrap; */
-
     gap: 10px;
     flex-flow: row; /* short hand property for direction and wrap */
 }
@@ -52,6 +57,15 @@
     background-color: red;
     align-self: center; /* will work if align-content is not used */
     order: 4;
+    flex-basis: 300px;
+    height: 200px;
+}
+
+#item-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: center; */
 }
 
 #item-3 {
@@ -75,10 +89,11 @@
 #item-7 {
     background-color: rgb(249, 82, 10);
     order: 7;
-    flex-grow: 3;
+    /* flex-grow: 3; */
     flex-shrink: 2;
-    font-size: 50px; /* default value = 16px */
-    width: 1em; /* 1 em = font-size */
+    font-size: 16px; /* default value = 16px */
+    flex-basis: 7em; /* 1 em = font size */
+    /* % is dependent on parent's value or if no parent exist, then it depends on browser's or body's value */
 }
 #item-8 {
     display: flex;
@@ -86,7 +101,7 @@
     background-color: rgb(165, 10, 249);
     height: 125px;
     order: 9;
-    flex: 5 2; /* shorthand property for - flex-grow flex-shrink flex-basis */
+    flex: 5 7 100px; /* shorthand property for - flex-grow flex-shrink flex-basis */
 }
 #item-9 {
     display: flex;
