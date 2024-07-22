@@ -1,0 +1,28 @@
+.container {
+    background-color: black;
+    color: #fff;
+}
+
+#row-1 {
+    border: yellow 5px solid;
+}
+
+#row-2 {
+    border: red 5px solid;
+}
+
+#row-3 {
+    border: blue 5px solid;
+}
+
+#row-3 .col:nth-of-type(1) {
+    border: 3px solid purple;
+}
+
+#row-3 .col:nth-of-type(2) {
+    border: 3px solid aqua;
+}
+
+#row-4 {
+    border: orange 5px solid;
+}

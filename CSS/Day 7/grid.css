@@ -3,7 +3,7 @@
     grid-template-columns: 100px auto 100px;
     grid-template-rows: 100px auto;
 
-    gap: 10px 50px; /* shorthand property - row-gap column gap */
+    gap: 10px 50px; /* shorthand property - row-gap column-gap */
 
     /* row-gap: 10px;
     column-gap: 50px; */
