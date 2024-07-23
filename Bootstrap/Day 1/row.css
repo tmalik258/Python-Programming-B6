@@ -15,14 +15,15 @@
     border: blue 5px solid;
 }
 
-#row-3 .col:nth-of-type(1) {
+#row-3 div:nth-of-type(1) {
     border: 3px solid purple;
 }
 
-#row-3 .col:nth-of-type(2) {
+#row-3 div:nth-of-type(2) {
     border: 3px solid aqua;
 }
 
 #row-4 {
     border: orange 5px solid;
 }
+
