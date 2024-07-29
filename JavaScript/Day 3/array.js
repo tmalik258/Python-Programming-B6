@@ -1,7 +1,7 @@
-let car_name = ['civic', 'gli', 'm5']
+let car_name = ['civic', 'gli', 'm5'];
 let honda = 'civic';
 
-let honda_name = car_name[2];
+let bmw_name = car_name[2];
 
 console.log(honda_name)
 console.log(car_name.length)
@@ -10,8 +10,12 @@ let random = ['hi', 123, 'is', 'me']
 
 random[2] = 'welcome'; // override 2nd index value
 
+random[1] = 'you';
 
-let text = random.join(' ')
+// ['hi', 'you', 'welcome', 'hello']
+
+// 'hi*you*welcome*me'
+let text = random.join('*')
 
 console.log(random);
 
@@ -19,7 +23,7 @@ random.pop(); // removes last value
 
 console.log(random)
 
-random.push('!'); // adds a value to last
+random.push('hello'); // adds a value to last
 
 console.log(random);
 
@@ -34,7 +38,7 @@ console.log(random);
 
 // access last value of array
 
-delete random[2];
+delete random;
 
 console.log(random);
 console.log(random.length);
