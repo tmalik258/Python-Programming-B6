@@ -1,0 +1,13 @@
+# git Commands
+git --version           // check version of git or any lang such as python
+git clone url           // to clone an online repository to your local system
+
+
+# Terminal Common Commands
+dir                     // show a list of files and directory/directories
+cd folderName           // change directory/select another folder
+cd ..                   // change directory back to parent folder
+mkdir newFolderName     // create new directory/folder
+rmdir folderName        // remove directory/folder
+cls                     // to clear terminal
+(press upArrowKey)      // to access command that you have typed in past
