@@ -11,7 +11,7 @@ let arrays = [23, 67, 90, 'hello', 'hi'];
 
 
 // parenthesis
-for (let i=0; i < 5; i++) {
+for (let i=0; i < arrays.length; i++) {
     console.log(arrays[i]);
 }
 
