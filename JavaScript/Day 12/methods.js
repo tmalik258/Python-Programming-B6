@@ -14,8 +14,8 @@ const person = {
     occupation: "BSSE",
 
     // functionalities / methods
-    walk: function () {
-        console.log("start walking");
+    walk () {
+        console.log('start walking')
     }
 }
 
