@@ -3,13 +3,15 @@ let colorChanged = true;
 function changeColor () {
     const container = document.querySelector('.container');
     const box = document.querySelector('.box');
-
+    console.log()
     if (colorChanged) {
         container.style.backgroundColor = 'black';
         box.style.backgroundColor = 'violet';
+        console.log(colorChanged)
         colorChanged = false;
     }
     else {
+        console.log(colorChanged)
         container.style.backgroundColor = 'blue';
         box.style.backgroundColor = 'yellow';
         colorChanged = true;
