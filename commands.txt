@@ -3,6 +3,14 @@ git --version           // check version of git or any lang such as python
 git clone url           // to clone an online repository to your local system
 git pull                // to retrieve online changes to your local respository
 
+git init                // to initialize a local folder into git repository
+git add .               // add all files in current folder to tracking
+git commit -m "msg"     // commit/save changes
+git branch -M main      // change your main branch name to "main"
+git remote add origin "github.com/username/repository.git"
+git push -u origin main         // to push on main origin branch
+git status              // to check status of your git repository
+
 
 # Terminal Common Commands
 dir                     // show a list of files and directory/directories

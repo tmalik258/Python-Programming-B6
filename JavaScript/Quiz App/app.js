@@ -71,7 +71,7 @@ function deleteOptions () {
     const options_container = document.querySelector('.options');
     
     while(options_container.firstChild) {
-        child = options_container.firstChild;
+        const child = options_container.firstChild;
 
         options_container.removeChild(child);
     }
