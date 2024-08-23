@@ -26,11 +26,11 @@ function sum(a, b) {
     return a + b;
 }
 
-function multiply(a, b, num, func) {
-    const num2 = func(a, b); // callback function which can be called at later time.
-    const result = num * num2;
+function multiply(a,func) {
+    const num2 = func(12, 13); // callback function which can be called at later time.
+    const result = a * num2;
 
     console.log(result);
 }
 
-multiply(1, 3, 2, sum);
+multiply('1', sum);
