@@ -2,7 +2,7 @@ function handleSubmit (event) {
     // event.preventDefault();
 
     console.log(event);
-    console.dir(event.target);
+    console.dir(event.target.option);
     
     // console.dir(event.target[0]);
     // console.dir(event.target[1]);
