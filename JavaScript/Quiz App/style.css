@@ -82,12 +82,13 @@ body {
     color: white;
 }
 
-.container form label.correct {
+.container form input:checked + label.correct {
     background-color: rgb(141, 255, 141);
     border: 1px solid green;
+    color: black;
 }
 
-.container form label.incorrect {
+.container form input:checked + label.incorrect {
     background-color: rgb(255, 91, 91);
     border: 1px solid red;
 }

@@ -84,11 +84,16 @@ function handleSubmit(e) {
   const original_answer = ques_obj.answer;
   const user_answer = e.target.option.value; // get user selected answer value
 
+  const checked_input = document.querySelector('input:checked')
+  const label_el = checked_input.nextElementSibling;
+
   if(original_answer === user_answer) {
     // add correct class to label element
+    label_el.classList.add('correct');
   }
   else {
     // add incorrect class to label element
+    label_el.classList.add('incorrect');
   }
 
   setTimeout(() => {
