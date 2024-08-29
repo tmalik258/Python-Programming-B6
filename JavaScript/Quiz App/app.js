@@ -26,7 +26,9 @@ const DATA_SET = [
   },
 ];
 
+
 let index = 0;
+
 
 
 // Initializes Quiz For the first Time when page is loaded
@@ -38,18 +40,19 @@ function startQuiz() {
 function displayQuestion() {
   const question_obj = DATA_SET[index];
 
+  // display question text
   const question_el = document.querySelector('#question');
   question_el.innerHTML = question_obj["question"]; // change question innerhtml
 
   const option_container = document.querySelector(".options");
-  option_container.innerHTML = ""; // empty previous options
+  option_container.innerHTML = ""; // emptying previous options
 
   const options_data = question_obj.options; // get options array from dataset
 
   // iterate over options array so options can be displayed
-  for (let i = 0; i < options_data.length; i++) {
-    const text = options_data[i];
-    options(text, i);
+  for (let index = 0; index < options_data.length; index++) {
+    const text = options_data[index];
+    options(text, index);
   }
 }
 
@@ -59,7 +62,7 @@ function options(text, i) {
   const input_el = document.createElement("input");
   const label_el = document.createElement("label");
 
-  const id = `option_${i}`;
+  const id = `option_${i}`; // literal string
 
   input_el.setAttribute("type", "radio");
   input_el.setAttribute("name", "option");
@@ -75,11 +78,13 @@ function options(text, i) {
 function handleSubmit(e) {
   e.preventDefault();
 
+  
+  const ques_obj = DATA_SET[index]; // get question object on current index
+  
+  const original_answer = ques_obj.answer;
   const user_answer = e.target.option.value; // get user selected answer value
 
-  const ques_obj = DATA_SET[index]; // get question object on current index
-
-  if(ques_obj.answer === user_answer) {
+  if(original_answer === user_answer) {
     // add correct class to label element
   }
   else {
@@ -87,9 +92,15 @@ function handleSubmit(e) {
   }
 
   setTimeout(() => {
+    // bug: index must not exceed
     index++; // increment current index so, next question can be displayed
-    displayQuestion(); // display next question
-  }, 2000);
+    if (index < DATA_SET.length) {
+      displayQuestion(); // display next question
+    }
+    else {
+      startQuiz()
+    }
+  }, 1000);
 }
 
 const form = document.querySelector("form");
