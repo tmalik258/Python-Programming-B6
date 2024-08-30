@@ -29,7 +29,10 @@ const DATA_SET = [
 
 let index = 0;
 
-
+input_el.addEventListener('input', (e) => {
+  console.log(e.target.value);
+  e.target.value = '';
+})
 
 // Initializes Quiz For the first Time when page is loaded
 function startQuiz() {
