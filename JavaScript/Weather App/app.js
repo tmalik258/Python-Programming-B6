@@ -1,5 +1,15 @@
-const input_el = document.querySelector("#query");
+const form = document.querySelector('form');
 
-input_el.addEventListener('input', (e) => {
-    console.log(e.target.value);
-})
+// form.addEventListener('submit', (e) => {
+//     console.log('hello')
+// })
+
+form.addEventListener('submit', handleSubmit); // callback function
+
+function handleSubmit(e) {
+    e.preventDefault();
+
+    const loc = e.target.location.value;
+
+    console.log(loc);
+}
