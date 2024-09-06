@@ -23,3 +23,5 @@ avg(23, 58);
 const greeting = name => console.log("Hi ", name, "!");
 
 greeting("talha");
+
+(a => console.log(a))('azad bhai, azad khayal wale');
