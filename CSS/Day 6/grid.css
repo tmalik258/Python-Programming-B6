@@ -1,0 +1,30 @@
+.container {
+    display: grid;
+
+    background-color: black;
+}
+
+/* descendant selector */
+.container div {
+    height: 100px;
+}
+
+.header {
+    background-color: aqua;
+}
+
+.menu {
+    background-color: blue;
+}
+
+.main {
+    background-color: yellow;
+}
+
+.right {
+    background-color: rebeccapurple;
+}
+
+.footer {
+    background-color: red;
+}

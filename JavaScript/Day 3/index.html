@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: relative;
+        }
+        .box::after {
+            content: '';
+            width: 100px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            top: 0;
+        }
+        .box::after {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <!-- <script>
+        alert('hello');
+        confirm('hello');
+        let x = prompt('give me an integer: ');
+
+        console.log(x);
+    </script> -->
+
+    <script src="./objects.js"></script>
+</body>
+</html>

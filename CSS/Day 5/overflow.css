@@ -1,0 +1,10 @@
+.container {
+    display: inline-block;
+    background-color: black;
+    height: 350px;
+    width: 200px;
+    overflow: auto;
+    overflow: scroll;
+    overflow: hidden;
+    overflow: visible; /* default value */
+}

@@ -1,0 +1,6 @@
+/* Element Selector */
+
+p, h1, a, table, form, h2, h6 {
+    color: rgb(32, 140, 248);
+    font-size: medium;
+}

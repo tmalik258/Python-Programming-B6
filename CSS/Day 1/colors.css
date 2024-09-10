@@ -1,0 +1,16 @@
+p {
+    color: rgb(162, 77, 77);
+    /* red / green / blue / alpha channel           0-255 */
+
+
+    color: #A24D4D;
+    /* hexadecimal code */
+    /* 0 - F */
+
+
+
+    color: hsl(0, 100%, 50%);
+    /* hue - color    0-360  */
+    /* saturation - greyish         0%-100% */
+    /* lightness - black/white         0%-100%  */
+}

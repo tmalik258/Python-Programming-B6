@@ -1,0 +1,54 @@
+.container {
+    background-color: black;
+    height: 300px;
+    position: relative;
+
+    /* overflow: hidden; */
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+#box1 {
+    /* position: static;  default - no t/b/l/r apply on this position */
+
+    /* position: fixed;     relative to screen/view     */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    z-index: 10;
+}
+
+#box2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: blue;
+    z-index: 0;
+}
+
+#box3 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: yellow;
+    z-index: 20;
+}
+
+#box4 {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    background-color: violet;
+    z-index: 30;
+}
+
+.heading-sticky {
+    position: sticky; /* change positions from relative to fixed according to viewport */
+    position: -webkit-sticky;
+    top: 10px;
+    bottom: 0;
+}

@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    gap: 10px;
+    background-color: black;
+    height: 500px;
+
+    grid-template-areas: 
+        'header header  header  header'
+        'menu   main    main    right'
+        'menu   footer  footer  footer'
+    ;
+}
+
+.header {
+    grid-area: header; /* assigning id */
+    background-color: yellow;
+}
+
+
+.menu {
+    grid-area: menu;
+    background-color: blueviolet;
+}
+
+.main {
+    grid-area: main;
+    background-color: red;
+}
+
+.right { 
+    grid-area: right;
+    background-color: green;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: brown;
+}

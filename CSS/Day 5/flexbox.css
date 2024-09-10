@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    height: 500px;
+    background-color: black;
+
+    display: flex;
+    flex-direction: row; /* default */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* justify content works on main axis */
+    /* justify-content on x-axis if direction is from left to right */
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; default */
+
+    /* align items/align content work on cross axis */
+    align-items: flex-start;
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    /* align-items: baseline; */
+
+
+    /* align-content: space-between;
+    align-content: space-around; */
+    /* align-content: space-evenly; */
+
+    /* flex-wrap: nowrap; -- default */
+    /* flex-wrap: wrap-reverse; */
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    flex-flow: row; /* short hand property for direction and wrap */
+}
+
+.item {
+    flex-basis: 100px; /* similar to width but used for flex-item */
+    height: 100px;
+}
+
+#item-1 {
+    background: rgb(198,29,219);
+    background: linear-gradient(90deg, rgba(198,29,219,1) 0%, rgba(0,241,251,1) 50%, rgba(249,255,0,1) 100%);
+
+    order: 5;
+}
+
+#item-2 {
+    background-color: red;
+    align-self: center; /* will work if align-content is not used */
+    order: 4;
+    flex-basis: 300px;
+    height: 200px;
+}
+
+#item-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: center; */
+}
+
+#item-3 {
+    background-color: rgb(58, 158, 16);
+    order: 6;
+}
+
+#item-4 {
+    background-color: rgb(249, 177, 10);
+    order: 1;
+    flex-shrink: 2;
+}
+#item-5 {
+    background-color: rgb(10, 249, 225);
+    order: 3;
+}
+#item-6 {
+    background-color: rgb(46, 10, 249);
+    order: 2;
+}
+#item-7 {
+    background-color: rgb(249, 82, 10);
+    order: 7;
+    /* flex-grow: 3; */
+    flex-shrink: 2;
+    font-size: 16px; /* default value = 16px */
+    flex-basis: 7em; /* 1 em = font size */
+    /* % is dependent on parent's value or if no parent exist, then it depends on browser's or body's value */
+}
+#item-8 {
+    display: flex;
+    align-items: center;
+    background-color: rgb(165, 10, 249);
+    height: 125px;
+    order: 9;
+    flex: 5 7 100px; /* shorthand property for - flex-grow flex-shrink flex-basis */
+}
+#item-9 {
+    display: flex;
+    align-items: flex-end;
+    background-color: rgb(10, 165, 249);
+    height: 150px;
+    order: 8;
+    flex-grow: 1;
+    flex-shrink: 13; /* shrink mtlb contract */
+}
