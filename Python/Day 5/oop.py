@@ -1,9 +1,6 @@
 # Object Oriented Programming
 
 class Cat: # blueprint/class of Cat
-    # legs = 4 # property of Cat class
-    # tail = True # property of Cat class
-
     # constructor
     def __init__(self, l, t):
         self.legs = l
@@ -22,9 +19,13 @@ cat3 = Cat()
 print(cat1.legs)
 print(cat1.tail)
 
-# cat1.play()
-# cat2.play()
+cat1.play()
+cat2.play()
 
 # student class
 # properties: name, age, st_id, marks, class/subject
 # methods: study(), attend_school(), intro()
+
+# circle class
+# properties:
+# methods: area()
