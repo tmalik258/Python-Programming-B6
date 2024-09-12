@@ -1,5 +1,12 @@
 # Object Oriented Programming
 
+# Four Pillars of OOP
+
+# Encapsulation
+# Inheritance
+# Polymorphism
+# Abstraction
+
 class Cat: # blueprint/class of Cat
     # constructor
     def __init__(self, l, t):

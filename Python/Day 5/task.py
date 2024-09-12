@@ -1,9 +1,3 @@
-# Four Pillars of OOP
-
-# Encapsulation
-# Inheritance
-# Polymorphism
-# Abstraction
 
 class Circle:
     PI = 3.1416
