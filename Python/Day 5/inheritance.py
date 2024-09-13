@@ -8,6 +8,10 @@ class Person:
     def intro(self):
         print(f'My name is {self.name} and age is {self.age}')
 
+    # Polymorphism - overloading ## python doesn't allow
+    # def intro(self, name):
+    #     print(f'My name is {self.name} and age is {self.age}')
+
 person = Person('Talha', 22)
 
 # person.intro()
@@ -18,11 +22,14 @@ class Student(Person):
         self.rollno = r
         self.marks = m
 
+    # polymorphism - overriding - to override parent class method
+    def intro(self): # override parent's intro method
+        super().intro()
+        print(f'{self.name}, {self.age}, {self.rollno}, {self.marks}')
 
 s = Student('Ahmed', 19, 80, 99.99)
 
 s.intro()
-print(s.name, s.age, s.marks, s.rollno)
 
 # a = '9832748919'
 # show = '879' # a[1:10:3]
