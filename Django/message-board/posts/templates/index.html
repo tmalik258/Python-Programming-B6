@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Welcome to home page!</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                {{ post.body }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
