@@ -1,0 +1,8 @@
+{% extends 'blog/layout.html' %}
+
+{% block content %}
+    <ul>
+        <li>{{ post.title }} | {{ post.author.username }}</li>
+        <li>{{ post.body }}</li>
+    </ul>
+{% endblock content %}

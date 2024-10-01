@@ -11,6 +11,9 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     
+    def __str__(self):
+        return self.title
+    
 
 # models.CASCADE            # on deletion of User/Parent object, Product/Child objects will also be deleted with an alert message
 # models.PROTECT            # can't delete Parent or Foreign Object cuz of relation with Product Model

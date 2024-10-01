@@ -1,0 +1,11 @@
+{% extends 'blog/layout.html' %}
+
+{% block content %}
+Welcome to home page
+
+<ul>
+    {% for post in posts %}
+        <li><a href="{% url 'details' post_id=post.id %}">{{ post.title }} | {{ post.author }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
