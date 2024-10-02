@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 # from django.contrib.auth.models import User       # how to import User model
 
 # from core import settings
@@ -13,6 +14,9 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse("details", kwargs={"post_id": self.id})
     
 
 # models.CASCADE            # on deletion of User/Parent object, Product/Child objects will also be deleted with an alert message
