@@ -10,6 +10,8 @@ class Post(models.Model):
     # author = models.ForeignKey("auth.User")           # another way to link Models
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
+    # The line `body = models.TextField(blank=True, null=True)` in the Django model class `Post` is
+    # defining a field named `body` that will store text data of potentially unlimited length.
     body = models.TextField()
     
     def __str__(self):
