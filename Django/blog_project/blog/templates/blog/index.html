@@ -5,7 +5,7 @@ Welcome to home page
 
 <ul>
     {% for post in posts %}
-        <li><a href="{{ post.get_absolute_url }}">{{ post.title }} | {{ post.author }}</a></li>
+        <li><a href="{{ post.get_absolute_url }}">{{ post.title }} | {{ post.author }}</a> | <a href="{% url 'update-post' post_id=post.id %}">Edit</a> | <a href="{% url 'delete-post' post.id %}">Delete</a></li>
     {% endfor %}
 </ul>
 {% endblock content %}

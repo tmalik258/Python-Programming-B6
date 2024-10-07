@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 from .models import Post
-from .forms import CreatePostForm
+from .forms import PostForm
 
 # Create your views here.
 def homeView(request):
@@ -24,7 +24,7 @@ def detailView(request, post_id):
 
 def createView(request):
     if request.method == 'POST':
-        form = CreatePostForm(request.POST)
+        form = PostForm(request.POST)
         print('method is post or form is submitted')
         
         if form.is_valid():
@@ -38,10 +38,10 @@ def createView(request):
 
     else:
         print('form is not submitted')
-        form = CreatePostForm()
+        form = PostForm()
 
         # for initial/default values
-        # form = CreatePostForm(initial={
+        # form = PostForm(initial={
         #     "title": post_obj.title,
         #     'body': post_obj.body
         # })
@@ -49,3 +49,37 @@ def createView(request):
     return render(request, 'blog/create.html', {
         "form": form
     })
+
+
+def updateView(request, post_id):
+    post = Post.objects.get(pk=post_id)
+
+    if request.method == 'POST':
+        print('form is submitted')
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect(post.get_absolute_url())
+    else:
+        print('form is rendered')  
+        form = PostForm(instance=post)
+
+        return render(request, 'blog/create.html', {
+            "form": form
+        })
+
+def deleteView(request, post_id):
+    # error handling
+    try:
+        post = Post.objects.get(pk=post_id)
+        
+    except Post.DoesNotExist:
+        return redirect('index')
+    
+    if request.method == 'POST':
+        post.delete()
+        return redirect('index')
+    
+    return render(request, 'blog/delete.html', {
+        "post": post
+        })
