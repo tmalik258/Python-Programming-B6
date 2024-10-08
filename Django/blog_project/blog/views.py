@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 from .models import Post
 from .forms import PostForm
@@ -22,7 +23,11 @@ def detailView(request, post_id):
     })
 
 
+@login_required
 def createView(request):
+    # if not request.user.is_authenticated:
+    #     return redirect('index')
+
     if request.method == 'POST':
         form = PostForm(request.POST)
         print('method is post or form is submitted')
@@ -51,6 +56,7 @@ def createView(request):
     })
 
 
+@login_required
 def updateView(request, post_id):
     post = Post.objects.get(pk=post_id)
 
@@ -68,6 +74,8 @@ def updateView(request, post_id):
             "form": form
         })
 
+
+@login_required
 def deleteView(request, post_id):
     # error handling
     try:
