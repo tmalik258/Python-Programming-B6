@@ -60,6 +60,9 @@ def createView(request):
 def updateView(request, post_id):
     post = Post.objects.get(pk=post_id)
 
+    if request.user.username != post.author.username:
+        return redirect('index') 
+
     if request.method == 'POST':
         print('form is submitted')
         form = PostForm(request.POST, instance=post)
