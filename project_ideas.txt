@@ -1,0 +1,9 @@
+Chat Application
+Django CMS
+Social Media App
+Password Safe App
+Automatic Tweet Posting App Using Django
+Dictionary Web App
+Video Calling App
+Video subscription apps like Netflix
+Web Crawler

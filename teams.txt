@@ -1,0 +1,4 @@
+Front end - ui/ux design, ui development, seo - React and React Native, Map API
+Back End - db design, backend design, rest api, testing, docker
+Devops - server management, cloud management, kubernetes
+Marketing/Graphic Designer
